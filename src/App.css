@@ -1,39 +1,144 @@
+/* General Reset */
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #f4f6f7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
   color: #333;
 }
 
+/* Navbar */
 .navbar {
-  background: #37474f;
-  color: white;
-  padding: 15px 40px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  background-color: #37474f;
+  padding: 10px 20px;
+  color: #fff;
 }
 
 .logo {
-  font-weight: bold;
   font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .nav-links a {
-  color: white;
-  margin-left: 30px;
+  color: #fff;
   text-decoration: none;
-  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.3s;
 }
 
-.researcher-section {
-  background: #f8f9fa;
-  padding: 60px 20px;
+.nav-links a:hover {
+  background-color: #546e7a;
+}
+
+/* Content Section */
+.content-section {
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.content-section h2 {
+  color: #37474f;
+  margin-bottom: 15px;
+}
+
+.content-section h3 {
+  margin-top: 30px;
+  color: #37474f;
+}
+
+.content-section p,
+.content-section ul {
+  line-height: 1.6;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #37474f;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.submit-button:hover {
+  background-color: #546e7a;
+}
+
+/* Bounty Table */
+.bounty-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.bounty-table th,
+.bounty-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.bounty-table th {
+  background-color: #f0f0f0;
+}
+
+/* Hall of Fame */
+.hall-of-fame {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.year-buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+.year-button {
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: 100px;
+  min-width: 70px;
+  padding: 8px 0;
+  border: 1px solid #37474f;
+  background-color: #fff;
+  color: #37474f;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.year-button:hover {
+  background-color: #37474f;
+  color: #fff;
+}
+
+/* Researcher Section */
+.researcher-section {
+  background: #f8f9fa;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .researcher-card {
@@ -44,148 +149,89 @@ body {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: #ddd;
+  object-fit: cover;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   margin-bottom: 10px;
 }
 
 .researcher-name {
   font-size: 14px;
+  word-break: break-word;
 }
 
+/* Footer */
 .footer {
-  background: #37474f;
-  color: white;
+  background-color: #37474f;
+  color: #fff;
   text-align: center;
-  padding: 40px 20px;
+  padding: 30px 20px;
 }
 
 .footer-links {
-  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
 }
 
 .footer-links a {
-  color: white;
-  margin: 0 12px;
-  font-size: 13px;
+  color: #fff;
   text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
 
 .footer-text {
-  margin: 15px 0;
+  font-size: 13px;
+  margin-top: 10px;
 }
 
-.socials span {
-  margin: 0 12px;
+.socials {
+  margin-top: 10px;
   font-size: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 .zoho-logo {
-  margin-top: 20px;
   font-weight: bold;
-  letter-spacing: 6px;
   font-size: 20px;
-  color: white;
+  margin-top: 10px;
 }
 
-.content-section {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.content-section h2,
-.content-section h3 {
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.content-section p,
-.content-section ul,
-.content-section table {
-  margin-bottom: 20px;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.content-section ul {
-  padding-left: 20px;
-}
-
-.submit-button {
-  background-color: #37474f;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 15px 0;
-  font-size: 16px;
-}
-
-.bounty-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-.bounty-table th,
-.bounty-table td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: left;
-}
-
-/* ✅ Responsive Styles */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .navbar {
+  .nav-links {
     flex-direction: column;
     align-items: flex-start;
-    padding: 15px 20px;
-  }
-
-  .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 10px;
-  }
-
-  .nav-links a {
-    margin: 5px 10px 5px 0;
-    font-size: 13px;
+    gap: 10px;
   }
 
   .content-section {
     padding: 20px 15px;
   }
 
-  .content-section ul {
-    padding-left: 15px;
+  .researcher-section {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   }
 
-  .footer {
-    padding: 30px 15px;
+  .avatar {
+    width: 60px;
+    height: 60px;
   }
 
-  .footer-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .footer-links a {
+  .researcher-name {
     font-size: 12px;
   }
+}
 
-  .socials span {
-    font-size: 18px;
-  }
-
-  .zoho-logo {
-    font-size: 18px;
+@media (max-width: 400px) {
+  .year-button {
+    flex: 1 1 calc(50% - 20px);
   }
 }
